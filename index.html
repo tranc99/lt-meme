@@ -2,19 +2,11 @@
 <head>
 	<title></title>
 </head>
-<body ng-controller="SimpleController">
-	Name:
-	<br />
-	<input type="text" ng-model="name" /> {{ name }}
-	<br />
-	<ul>
-		<li ng-repeat="cust in customers | filter:name | orderBy:'city'"><a href="">{{ cust.name | lowercase }} - {{ cust.city | uppercase }}</a>
-			<br />
-			<a href="#"><img src="mdn.png" /></a>
-			
-		</li>
-		
-	</ul>
+<body>
+	<div ng-view="">
+	
+	</div>
+	
 	<script src="angular.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/maincontroller.js"></script>

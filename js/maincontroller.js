@@ -5,6 +5,14 @@ function SimpleController($scope) {
 		{name:'Ten Mutunhire', city:'Marondera'},
 		{name:'Smriti Lall', city:'Phnom Penn'}
 	];
+	
+	$scope.addCustomer = function () {
+	    $scope.customers.push(
+	    {
+		name: $scope.newCustomer.name,
+		city: $scope.newCustomer.city
+	    });
+	};
 }
 demoApp.config(function ($routeProvider) {
     $routeProvider
@@ -13,7 +21,7 @@ demoApp.config(function ($routeProvider) {
 		controller: 'SimpleController',
 		templateUrl: 'Partials/View1.html'
 	    })
-	.when('/partial2',
+	.when('/view2',
 	    {
 		controller: "SimpleController",
 		templateUrl: "Partials/View2.html"
