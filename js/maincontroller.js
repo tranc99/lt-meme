@@ -16,8 +16,8 @@ demoApp.factory('simpleFactory', function() {
 	return factory;
 })
 
-function SimpleController($scope) {
-	$scope.customers = 
+function SimpleController($scope, simpleFactory) {
+	$scope.customers = simpleFactory.getCustomers();
 	
 	$scope.addCustomer = function () {
 	    $scope.customers.push(
